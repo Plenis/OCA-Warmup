@@ -21,7 +21,7 @@ public class ArrayElement extends ArrayInput {
         return Arrays.toString(array);
     }
 
-    public int[][] twoDimensionArrayMethod(){
+    public String twoDimensionArrayMethod(){
 
         int[][] array = new int[10][10];
         int replace = 0;
@@ -50,13 +50,25 @@ public class ArrayElement extends ArrayInput {
             }
         }
 
-        return array;
+        for(int[] row: array){
+            printRow(row);
+        }
+
+        return "";
+    }
+
+    public static void printRow(int[] row) {
+        for (int i : row) {
+            System.out.print(i);
+            System.out.print("\t");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
         ArrayElement arr = new ArrayElement();
         arr.set2DArray(new int[][]{{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}});
 
-        System.out.println(Arrays.deepToString(arr.twoDimensionArrayMethod()));
+        System.out.println(arr.twoDimensionArrayMethod());
     }
 }
