@@ -36,7 +36,6 @@ public class ArrayElement extends ArrayInput {
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i][j]; j++) {
-                num ++;
                 array[i][j] = (num) *2;
             }
         }
