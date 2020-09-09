@@ -21,6 +21,19 @@ class ArrayElementTest {
 
         /* it prints each row in each line */
         assertEquals(array.twoDimensionArrayMethod(), "");
+    }
 
+    @Test
+    void shouldGetMultipleOf3Total(){
+        ArrayMultipleOf3Total arr = new ArrayMultipleOf3Total(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
+
+        assertEquals(arr.getMultipleOf3Total(), 4);
+    }
+
+    @Test
+    void shouldGetMultipleOf5Total(){
+        ArrayMultipleOf5Total arr = new ArrayMultipleOf5Total(new int[][]{{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}});
+
+        assertEquals(arr.getMultipleOf5Total(), 4);
     }
 }
